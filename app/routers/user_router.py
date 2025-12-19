@@ -18,5 +18,3 @@ async def register(data: RegisterSchema, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(user)
     return DataResponse.custom_response(data=user, code='201', message='register success')
-
-login
